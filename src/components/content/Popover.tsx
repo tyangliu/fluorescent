@@ -1,28 +1,8 @@
 import { Global, css } from "@emotion/react";
 import { MaterialSymbol } from "react-material-symbols";
 
-import HColorList from "@/components/content/HColorList";
-
-
-function ActionButton({className = "", children}: {className?: string, children: React.ReactNode}) {
-  return (
-    <button
-      className={className}
-      css={css`
-        background: none;
-        border: none;
-        height: 100%;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      `}
-    >
-      {children}
-    </button>
-  );
-
-}
+import HColorList from "@/components/common/HColorList";
+import ActionButton from "@/components/common/ActionButton";
 
 export default function Popover() {
   return (

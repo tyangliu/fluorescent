@@ -25,6 +25,7 @@ function App() {
 
           * {
             box-sizing: border-box;
+            outline: none;
           }
         `}/>
         <Panel

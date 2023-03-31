@@ -4,7 +4,7 @@ import { ReactComponent as FlIcon } from "@/assets/icon.svg";
 import { MaterialSymbol } from "react-material-symbols";
 
 import Note from "@/components/common/Note";
-import VColorList from "@/components/content/VColorList";
+import VColorList from "@/components/common/VColorList";
 
 function ControlBar() {
   return (
@@ -15,7 +15,9 @@ function ControlBar() {
       justify-content: flex-end;
     `}>
       <button css={css`
-        padding: 4px 1px;
+        padding: 1px;
+        display: flex;
+        align-items: center;
       `}>
         <MaterialSymbol
           icon="close_fullscreen"
@@ -27,6 +29,8 @@ function ControlBar() {
       <button css={css`
         padding: 4px 1px;
         margin-right: 8px;
+        display: flex;
+        align-items: center;
       `}>
         <MaterialSymbol
           icon="close"

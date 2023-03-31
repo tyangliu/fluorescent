@@ -90,7 +90,7 @@ function Header() {
         justify-content: flex-end;
       `}>
         <MaterialSymbol
-          icon="cloud_upload"
+          icon="cloud_done"
           size={18}
           fill
           color="rgba(24,60,91,1)"
@@ -485,9 +485,9 @@ function PageIndex({index = 0, active = false}) {
         height: 20px;
         background: ${active ? "rgba(24,60,91,1)" : "#d1dde6"};
         background-clip:content-box;
-        border: 3px solid rgba(24,60,91,${active ? "1" : "0"});
+        border: 1px solid rgba(24,60,91,${active ? "1" : "0"});
         margin-right: 10px;
-        padding: 3px;
+        padding: 4px;
       `}/>
       <div css={css`
         font-weight: ${active ? "bold" : "normal"};
