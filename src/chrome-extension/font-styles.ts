@@ -6,6 +6,7 @@ import libreBaskervilleRegUrl from "@/assets/fonts/libre-baskerville-v14-latin-r
 import libreBaskevilleBoldUrl from "@/assets/fonts/libre-baskerville-v14-latin-700.woff2"
 import loraRegUrl from "@/assets/fonts/lora-v32-latin-regular.woff2";
 import loraBoldUrl from "@/assets/fonts/lora-v32-latin-700.woff2";
+import materialSymbolsUrl from "@/assets/fonts/material-symbols-rounded.woff2";
 
 export const fontStyles = `
   /* work-sans-regular - latin */
@@ -74,4 +75,26 @@ export const fontStyles = `
     font-weight: 700;
     src: url('${chrome.runtime.getURL(loraBoldUrl)}') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+ */
   }
+
+  @font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    src: url('${chrome.runtime.getURL(materialSymbolsUrl)}') format('woff2');
+  }
+
+  .material-symbols {
+    user-select: none;
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    font-family: 'Material Symbols Rounded';
+  }
+
 `;

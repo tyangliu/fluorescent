@@ -2,15 +2,7 @@ import React from "react";
 import emotionReset from "emotion-reset";
 import { Global, css } from "@emotion/react";
 import { ReactComponent as FlLogo } from "@/assets/logo.svg";
-import { ReactComponent as SearchIcon } from "@material-design-icons/svg/round/search.svg";
-import { ReactComponent as SettingsIcon } from "@material-design-icons/svg/round/settings.svg";
-import { ReactComponent as CloudUploadIcon } from "@material-design-icons/svg/round/cloud_upload.svg";
-import { ReactComponent as AddIcon } from "@material-design-icons/svg/round/add.svg";
-import { ReactComponent as TuneIcon } from "@material-design-icons/svg/round/tune.svg";
-import { ReactComponent as ExpandMoreIcon } from "@material-design-icons/svg/round/expand_more.svg";
-import { ReactComponent as ExpandLessIcon } from "@material-design-icons/svg/round/expand_less.svg";
-import { ReactComponent as MoreVertIcon } from "@material-design-icons/svg/round/more_vert.svg";
-import { ReactComponent as ArrowUpwardIcon } from "@material-design-icons/svg/round/arrow_upward.svg";
+import { MaterialSymbol } from "react-material-symbols";
 
 import Note from "@/components/common/Note";
 
@@ -74,16 +66,20 @@ function Header() {
             width: 100%;
           `}
         />
-        <SearchIcon css={css`
-          fill: rgba(24,60,91,1);
-          position: absolute;
-          margin: auto;
-          top: 0;
-          left: 12px;
-          bottom: 0;
-          width: 18px;
-          height: 18px;
-        `}/>
+        <MaterialSymbol
+          icon="search"
+          size={18}
+          fill
+          color="rgba(24,60,91,1)"
+          css={css`
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 12px;
+          `}
+        />
       </div>
 
       <div css={css`
@@ -93,17 +89,21 @@ function Header() {
         display: flex;
         justify-content: flex-end;
       `}>
-        <CloudUploadIcon css={css`
-          fill: rgba(24,60,91,1);
-          width: 18px;
-          height: 18px;
-          margin-right: 18px;
-        `}/>
-        <SettingsIcon css={css`
-          fill: rgba(24,60,91,1);
-          width: 18px;
-          height: 18px;
-        `}/>
+        <MaterialSymbol
+          icon="cloud_upload"
+          size={18}
+          fill
+          color="rgba(24,60,91,1)"
+          css={css`
+            margin-right: 18px;
+          `}
+        />
+        <MaterialSymbol
+          icon="settings"
+          size={18}
+          fill
+          color="rgba(24,60,91,1)"
+        />
       </div>
     </FlexContainer>
   );
@@ -156,13 +156,18 @@ function FolderList() {
         align-items: center;
         position: relative;
       `}>
-        <AddIcon css={css`
-          fill: rgba(0,0,0,0.4);
-          width: 18px;
-          height: 18px;
-          position: absolute;
-          left: -20px;
-        `}/>
+        <MaterialSymbol
+          icon="add"
+          size={18}
+          fill
+          color="rgba(0,0,0,0.4)"
+          css={css`
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: -20px;
+          `}
+        />
         <span>
           New Folder
         </span>
@@ -214,11 +219,12 @@ function FilterMenu() {
             `}>
               Tags
             </span>
-            <ExpandMoreIcon css={css`
-              fill: rgba(24,60,91,1);
-              width: 18px;
-              height: 18px;
-            `}/>
+            <MaterialSymbol
+              icon="expand_more"
+              size={18}
+              fill
+              color="rgba(24,60,91,1)"
+            />
           </div>
         </li>
         <li>
@@ -238,11 +244,12 @@ function FilterMenu() {
               justify-content: space-between;
             `}>
               <span>Custom</span>
-              <ExpandMoreIcon css={css`
-                fill: rgba(24,60,91,1);
-                width: 18px;
-                height: 18px;
-              `}/>
+              <MaterialSymbol
+                icon="expand_more"
+                size={18}
+                fill
+                color="rgba(24,60,91,1)"
+              />
             </li>
           </ul>
         </li>
@@ -308,12 +315,15 @@ function NoteNav() {
           display: flex;
           align-items: center;
         `}>
-          <TuneIcon css={css`
-            fill: rgba(24,60,91,1);
-            width: 18px;
-            height: 18px;
-            margin-right: 8px;
-          `}/>
+          <MaterialSymbol
+            icon="tune"
+            size={18}
+            fill
+            color="rgba(24,60,91,1)"
+            css={css`
+              margin-right: 8px;
+            `}
+          />
           <span>Filters</span>
         </button>
       </nav>
@@ -327,7 +337,7 @@ function PageItem() {
     <li css={css`
       border-radius: 4px;
       border: 1px solid rgba(0,0,0,0.1);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
     `}>
       <div css={css`
         display: flex;
@@ -358,15 +368,20 @@ function PageItem() {
           align-items: center;
           margin: 16px 8px 16px 16px;
         `}>
-          <MoreVertIcon css={css`
-            fill: rgba(24,60,91,1);
-            width: 18px;
-            height: 18px;
-            margin-left: 8px;
-          `}/>
+          <MaterialSymbol
+            icon="more_vert"
+            size={18}
+            fill
+            color="rgba(24,60,91,1)"
+            css={css`
+              margin-left: 8px;
+            `}
+          />
         </button>
       </div>
-      <Note />
+      <Note css={css`
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      `} />
       <Note />
       <div css={css`
         display: flex;
@@ -389,7 +404,7 @@ function NoteItem() {
     <li css={css`
       border-radius: 4px;
       border: 1px solid rgba(0,0,0,0.1);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
     `}>
       <div css={css`
         display: flex;
@@ -425,12 +440,15 @@ function NoteItem() {
           align-items: center;
           margin: 6px 8px 6px 16px;
         `}>
-          <MoreVertIcon css={css`
-            fill: rgba(24,60,91,1);
-            width: 18px;
-            height: 18px;
-            margin-left: 8px;
-          `}/>
+          <MaterialSymbol
+            icon="more_vert"
+            size={18}
+            fill
+            color="rgba(24,60,91,1)"
+            css={css`
+              margin-left: 8px;
+            `}
+          />
         </button>
       </div>
       <Note />
@@ -495,18 +513,19 @@ function PageTop() {
         position: absolute;
         background: #fff;
         left: -2px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
         width: 24px;
         height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
       `}>
-        <ArrowUpwardIcon css={css`
-          fill: rgba(24,60,91,0.5);
-          width: 18px;
-          height: 18px;
-        `}/>
+        <MaterialSymbol
+          icon="arrow_upward"
+          size={18}
+          fill
+          color="rgba(24,60,91,0.5)"
+        />
       </div>
       <div css={css`
         margin-left: 30px;

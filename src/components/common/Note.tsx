@@ -1,10 +1,9 @@
 import { css } from "@emotion/react";
-import { ReactComponent as MoreVertIcon } from "@material-design-icons/svg/round/more_vert.svg";
-import { ReactComponent as EditIcon } from "@material-design-icons/svg/round/edit.svg";
+import { MaterialSymbol } from "react-material-symbols";
 
-export default function Note() {
+export default function Note({className = ""}: {className?: string}) {
   return (
-    <>
+    <div className={className}>
       <div css={css`
         padding: 16px;
         line-height: 1.5em;
@@ -60,25 +59,27 @@ export default function Note() {
             padding: 6px 0;
             margin-right: 10px;
           `}>
-            <EditIcon css={css`
-              fill: rgba(24,60,91,1);
-              width: 18px;
-              height: 18px;
-            `}/>
+            <MaterialSymbol
+              icon="edit"
+              size={18}
+              fill
+              color="rgba(24,60,91,1)"
+            />
           </button>
           <button css={css`
             display: flex;
             align-items: center;
             padding: 6px 0;
           `}>
-            <MoreVertIcon css={css`
-              fill: rgba(24,60,91,1);
-              width: 18px;
-              height: 18px;
-            `}/>
+            <MaterialSymbol
+              icon="more_vert"
+              size={18}
+              fill
+              color="rgba(24,60,91,1)"
+            />
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
