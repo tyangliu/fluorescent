@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import { Global, css } from "@emotion/react";
+import emotionReset from "emotion-reset";
 
 import { fontStyles } from "@/chrome-extension/font-styles";
 import Panel from "@/components/content/Panel";
@@ -24,7 +25,7 @@ function PanelContainer() {
       position: fixed;
       top: 0;
       right: 0;
-      width: 300px;
+      width: 400px;
       height: 100vh;
       z-index: 9999999;
       padding: 10px;
@@ -32,7 +33,10 @@ function PanelContainer() {
       transform: translateX(${open ? 0 : 300}px);
       transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
     `}>
-      <Global styles={css`${fontStyles}`}/>
+      <Global styles={css`
+        ${emotionReset}
+        ${fontStyles}
+      `}/>
       <Panel />
     </div>
   );
