@@ -121,11 +121,10 @@ function InstallButton() {
 function Hero() {
   return (
     <div css={css`
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       flex: 1;
-      min-height: 0;
       justify-content: space-between;
       position: relative;
       overflow-x: hidden;
@@ -149,6 +148,7 @@ function Hero() {
         `}>
           <h1 css={css`
             text-align: center;
+            margin-bottom: 0.5rem;
           `}>
             <span css={css`
               background: rgba(49,226,103,0.5);
@@ -161,9 +161,13 @@ function Hero() {
           </h1>
           <h2 css={css`
             text-align: center;
-            margin-bottom: 0.5em;
+            margin-bottom: 1rem;
           `}>
-            With a sprinkling of AI 💡😊
+            <span css={css`
+            `}>
+              With a sprinkling of AI
+            </span>
+            &nbsp;💡😊
           </h2>
           <div css={css`
             width: 100%;
@@ -176,7 +180,7 @@ function Hero() {
               border: 1px solid rgba(0,0,0,0.1);
               max-width: 700px;
               width: 100%;
-              height: 320px;
+              height: 280px;
               box-shadow: 0 -1px 6px rgba(0,0,0,0.05);
               background: #fff;
               position: relative;
@@ -272,8 +276,8 @@ export default function App() {
         }
 
         h2 {
-          font-size: 1.8rem;
-          line-height: 3rem;
+          font-size: 1.66rem;
+          line-height: 2.3rem;
         }
 
         h3 {
@@ -293,14 +297,31 @@ export default function App() {
       `}>
         <section css={css`
           width: 100%;
-          max-width: 1160px;
+          max-width: 960px;
           margin: 0 auto;
         `}>
           <div css={css`
             margin: 0 20px;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           `}>
-            <h2>Semantically search and converse with AI</h2>
+            <h2 css={css`
+              margin-bottom: 1.2rem;
+            `}>
+              Local by default, ☁️ power if you'd like
+            </h2>
+            <p css={css`
+
+            `}>
+              By default, your notes are stored and processed on-device.
+            </p>
+            <p css={css`
+
+            `}>
+              Cloud-powered features are cool, but only if you opt-in.
+            </p>
           </div>
         </section>
       </div>
@@ -311,14 +332,35 @@ export default function App() {
       `}>
         <section css={css`
           width: 100%;
-          max-width: 1160px;
+          max-width: 960px;
           margin: 0 auto;
         `}>
           <div css={css`
             margin: 0 20px;
-            text-align: center;
+            display: flex;
           `}>
-            <h2>Organize your notes</h2>
+            <div css={css`
+              padding: 20px;
+              border-radius: 8px;
+              border: 1px solid rgba(0,0,0,0.1);
+              box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+              max-width: 360px;
+            `}>
+              <h2 css={css`
+                margin-bottom: 1.2rem;
+              `}>
+                Organize and find notes effortlessly
+              </h2>
+              <p css={css`
+              `}>
+                Find relevant notes with ease through search, folders, and tags whether you have 10 or 10,000 notes.
+              </p>
+            </div>
+            <div css={css`
+
+            `}>
+
+            </div>
           </div>
         </section>
       </div>
@@ -329,21 +371,43 @@ export default function App() {
       `}>
         <section css={css`
           width: 100%;
-          max-width: 1160px;
+          max-width: 960px;
           margin: 0 auto;
         `}>
           <div css={css`
             margin: 0 20px;
-            text-align: center;
+            display: flex;
           `}>
-            <h2>Local by default / ☁️ power if you'd like</h2>
+            <div css={css`
+              flex: 1;
+            `}>
+            </div>
+
+            <div css={css`
+              padding: 20px;
+              border-radius: 8px;
+              border: 1px solid rgba(0,0,0,0.1);
+              box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+              max-width: 360px;
+            `}>
+              <h2 css={css`
+                margin-bottom: 1.2rem;
+              `}>
+                Semantically search & converse with AI
+              </h2>
+              <p>
+                Quickly find and save answers from webpages
+                with the help of semantic in-page search
+                and conversational AI.
+              </p>
+            </div>
           </div>
         </section>
       </div>
       <div css={css`
         display: flex;
-        background: rgb(57,208,241);
-        background: linear-gradient(0deg, rgba(57,208,241,0.2) 0%, rgba(49,226,103,0.2) 39%, rgba(244,208,64,0.2) 71%, rgba(255,255,255,0) 100%);
+        background: rgb(244,208,64);
+        background: linear-gradient(0deg, rgba(244,208,64,0.2) 0%, rgba(49,226,103,0.2) 39%, rgba(57,208,241,0.2) 61%, rgba(255,255,255,0) 100%);
       `}>
         <section css={css`
           width: 100%;
