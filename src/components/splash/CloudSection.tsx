@@ -4,7 +4,7 @@ export default function CloudSection() {
   return (
     <div css={css`
       display: flex;
-      margin: 160px 0;
+      margin: 240px 0 160px;
     `}>
       <section css={css`
         width: 100%;

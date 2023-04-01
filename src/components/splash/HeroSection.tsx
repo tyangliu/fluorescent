@@ -42,13 +42,15 @@ export default function HeroSection() {
               border-radius: 5px;
               padding: 0 4px;
             `}>
-              Highlight, annotate, and inquire
+              Highlight
             </span>
-            &nbsp;the web.
+            ,&nbsp;annotate, and inquire the web.
           </h1>
           <h2 css={css`
             text-align: center;
             margin-bottom: 4rem;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: normal;
           `}>
             <span css={css`
             `}>
