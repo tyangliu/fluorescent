@@ -1,4 +1,5 @@
-import { Global, css } from "@emotion/react";
+import { css } from "@emotion/react";
+import { MaterialSymbol } from "react-material-symbols";
 
 import InfoSectionPanel from "@/components/splash/InfoSectionPanel";
 
@@ -15,41 +16,29 @@ export default function AiSearchWindow() {
       margin-right: 40px;
       min-width: 200px;
     `}>
-
-      <Global styles={css`
-        @keyframes cursor-blink {
-          0% {
-            opacity: 0;
-          }
-        }
-
-        .ai-search-bar span::after {
-          content: "";
-          width: 2px;
-          height: 16px;
-          background: rgba(24,60,91,0.5);
-          display: inline-block;
-          position: absolute;
-          top: -1px;
-          right: -5px;
-          animation: cursor-blink 1.5s steps(2) infinite;
-        }
-      `}/>
       <InfoSectionPanel
         activeTabIdx={1}
       >
         <div
-          className="ai-search-bar"
           css={css`
             padding: 4px 10px;
             margin: 0 6px;
             background: rgba(242,246,249,1);
             border-radius: 9999px;
+            display: flex;
+            align-items: center;
           `}
         >
-          <span css={css`
-            position: relative;
-          `}>
+          <MaterialSymbol
+            icon="search"
+            size={14}
+            fill
+            color="rgba(24,60,91,0.7)"
+            css={css`
+              margin-right: 8px;
+            `}
+          />
+          <span className="type-cursor">
             jellyfish facts
           </span>
         </div>
@@ -74,7 +63,7 @@ export default function AiSearchWindow() {
                   padding: 6px 10px;
                 `}>
                   <span css={css`
-                    background: rgba(0,0,0,0.05);
+                    background: rgba(242,246,249,1);
                   `}>
                     {text}
                   </span>
@@ -82,6 +71,7 @@ export default function AiSearchWindow() {
                 <div css={css`
                   height: 16px;
                   border-top: 1px solid rgba(0,0,0,0.05);
+                  background: #fff;
                 `}/>
               </div>
             ))
@@ -91,13 +81,12 @@ export default function AiSearchWindow() {
       <div css={css`
         position: absolute;
         width: 100%;
-        height: 15%;
+        height: 30%;
         bottom: 0;
         left: 0;
         right: 0;
         background: rgb(57,208,241);
-        background: linear-gradient(0deg, rgba(57,208,241,1) 0%, rgba(53,218,165,1) 36%, rgba(49,226,103,0) 100%);
-        opacity: 0.1;
+        background: linear-gradient(0deg, rgba(57,208,241,0.05) 0%, rgba(53,218,165,0.05) 36%, rgba(49,226,103,0) 100%);
         border-radius: 0 0 8px 8px;
       `}/>
     </div>

@@ -77,14 +77,24 @@ function InfoSectionPanelNav({activeTabIdx = 0}) {
   );
 }
 
-export default function InfoSectionPanel({activeTabIdx = 0, children}: {activeTabIdx?: number, children: React.ReactNode}) {
+export default function InfoSectionPanel({
+  className = "",
+  activeTabIdx = 0,
+  children
+}: {
+  className?: string,
+  activeTabIdx?: number,
+  children: React.ReactNode,
+}) {
   return (
-    <div css={css`
-      border-bottom: none;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    `}>
+    <div
+      css={css`
+        border-bottom: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      `}
+    >
       <div css={css`
         width: 100%;
         height: 18px;
@@ -184,11 +194,14 @@ export default function InfoSectionPanel({activeTabIdx = 0, children}: {activeTa
             </li>
           </ul>
         </div>
-        <div css={css`
-          flex: 1;
-          font-size: 12px;
-          line-height: 1.5em;
-        `}>
+        <div
+          className={className}
+          css={css`
+            flex: 1;
+            font-size: 12px;
+            line-height: 1.5em;
+          `}
+        >
           <InfoSectionPanelNav activeTabIdx={activeTabIdx} />
           {children}
         </div>

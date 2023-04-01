@@ -381,26 +381,6 @@ function ShowcasePopover() {
       box-shadow: 0 0 6px rgba(24,60,91,0.15);
       border: 1px solid rgba(0,0,0,0.1);
     `}>
-
-      <Global styles={css`
-        @keyframes cursor-blink {
-          0% {
-            opacity: 0;
-          }
-        }
-
-        .showcase-popover-note span::after {
-          content: "";
-          width: 2px;
-          height: 16px;
-          background: rgba(24,60,91,0.5);
-          display: inline-block;
-          position: absolute;
-          top: -1px;
-          right: -5px;
-          animation: cursor-blink 1.5s steps(2) infinite;
-        }
-      `}/>
       <div css={css`
         padding: 8px 12px;
         font-size: 12px;
@@ -439,11 +419,14 @@ function ShowcasePopover() {
           top: -6.5px;
           left: 16px;
         `}/>
-        <p className="showcase-popover-note">
+        <p>
           Remember to study: what other sea creatures besides jellyfish&nbsp;
-          <span css={css`
-            position: relative;
-          `}>
+          <span className="type-cursor offset">
+            <Global styles={css`
+              .offset:after {
+                top: -1px;
+              }
+            `}/>
             glow?
           </span>
         </p>

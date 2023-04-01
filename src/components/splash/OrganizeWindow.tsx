@@ -15,13 +15,12 @@ export default function OrganizeWindow() {
       <div css={css`
         position: absolute;
         width: 100%;
-        height: 15%;
+        height: 30%;
         bottom: 0;
         left: 0;
         right: 0;
         background: rgb(49,226,103);
-        background: linear-gradient(0deg, rgba(49,226,103,1) 0%, rgba(172,215,78,1) 32%, rgba(244,208,64,0) 100%);
-        opacity: 0.1;
+        background: linear-gradient(0deg, rgba(49,226,103,0.05) 0%, rgba(172,215,78,0.05) 32%, rgba(244,208,64,0) 100%);
       `}/>
     </div>
   );

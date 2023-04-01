@@ -52,6 +52,27 @@ export default function App() {
           color: rgba(0,170,137,1);
           text-decoration: underline;
         }
+
+        @keyframes cursor-blink {
+          0% {
+            opacity: 0;
+          }
+        }
+
+        span.type-cursor {
+          position: relative;
+        }
+
+        span.type-cursor::after {
+          content: "";
+          width: 2px;
+          height: 16px;
+          background: rgba(24,60,91,0.5);
+          display: inline-block;
+          position: absolute;
+          right: -5px;
+          animation: cursor-blink 1.5s steps(2) infinite;
+        }
       `} />
       <Header />
       <HeroSection />
