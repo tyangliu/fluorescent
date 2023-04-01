@@ -1,5 +1,7 @@
 import { css } from "@emotion/react";
 
+import OrganizeWindow from "@/components/splash/OrganizeWindow";
+
 export default function OrganizeSection() {
   return (
     <div css={css`
@@ -63,7 +65,7 @@ export default function OrganizeSection() {
               z-index: 1;
             `}/>
             <h2 css={css`
-              margin-bottom: 1.2rem;
+              margin-bottom: 1rem;
               position: relative;
             `}>
               <div css={css`
@@ -84,27 +86,12 @@ export default function OrganizeSection() {
           </div>
           <div css={css`
             flex: 1;
-            height: 330px;
-            background: #fff;
-            border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.1);
-            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
-            z-index: -2;
-            position: relative;
-            overflow: hidden;
             margin-left: -40px;
+            display: flex;
+            align-items: center;
+            z-index: -2;
           `}>
-            <div css={css`
-              position: absolute;
-              width: 100%;
-              height: 30%;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background: rgb(49,226,103);
-              background: linear-gradient(0deg, rgba(49,226,103,1) 0%, rgba(172,215,78,1) 32%, rgba(244,208,64,0) 100%);
-              opacity: 0.1;
-            `}/>
+            <OrganizeWindow />
           </div>
         </div>
       </section>

@@ -372,8 +372,9 @@ function ShowcasePopover() {
     <div css={css`
       position: absolute;
       width: 260px;
-      top: 20px;
-      left: -46px;
+      bottom: 2px;
+      left: 0;
+      right: 0;
       margin: auto;
       background: #fff;
       border-radius: 4px;
@@ -605,7 +606,6 @@ function ShowcasePageContentBody() {
               position: relative;
             `}>
               animal life, gelatinous or otherwise, that thrives at greater depths
-              <ShowcasePopover />
             </span>
             , a submersible vehicle like the ones used by scientists in Monterey Bay comes equipped with powerful lights.&nbps;
             To truly understand the life down there, however, those lights must be turned off.&nbsp;
@@ -681,6 +681,7 @@ export default function ShowcaseWindow() {
       <ShowcaseBackdrop />
       <div css={css`
         overflow: hidden;
+        position: relative;
       `}>
         <div css={css`
           width: 100%;
@@ -728,6 +729,7 @@ export default function ShowcaseWindow() {
           <ShowcasePageContent />
           <ShowcasePanel />
         </div>
+        <ShowcasePopover />
       </div>
     </div>
   );

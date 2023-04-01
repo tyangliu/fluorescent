@@ -1,5 +1,8 @@
 import { css } from "@emotion/react";
 
+import AiChatWindow from "@/components/splash/AiChatWindow";
+import AiSearchWindow from "@/components/splash/AiSearchWindow";
+
 export default function AiSection() {
   return (
     <div css={css`
@@ -19,26 +22,13 @@ export default function AiSection() {
         `}>
           <div css={css`
             flex: 1;
-            height: 330px;
-            background: #fff;
             margin-right: -40px;
-            border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.1);
-            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
             z-index: -1;
-            position: relative;
           `}>
-            <div css={css`
-              position: absolute;
-              width: 100%;
-              height: 30%;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background: rgb(57,208,241);
-              background: linear-gradient(0deg, rgba(57,208,241,1) 0%, rgba(53,218,165,1) 36%, rgba(49,226,103,0) 100%);
-              opacity: 0.1;
-            `}/>
+            <AiSearchWindow />
+            <AiChatWindow />
           </div>
           <div css={css`
             padding: 20px;
@@ -86,7 +76,7 @@ export default function AiSection() {
               transform: rotate(-45deg);
             `}/>
             <h2 css={css`
-              margin-bottom: 1.2rem;
+              margin-bottom: 1rem;
               position: relative;
             `}>
               <div css={css`

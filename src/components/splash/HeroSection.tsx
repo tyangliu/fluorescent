@@ -56,7 +56,7 @@ export default function HeroSection() {
             `}>
               With a sprinkling of AI
             </span>
-            &nbsp;💡😊
+            &nbsp;💡
           </h2>
           <div css={css`
             width: 100%;
