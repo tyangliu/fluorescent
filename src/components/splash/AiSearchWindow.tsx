@@ -53,8 +53,7 @@ export default function AiSearchWindow() {
               <div
                 key={i}
                 css={css`
-                  border: 1px solid rgba(0,0,0,0.1);
-                  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+                  border: 1px solid rgba(0,0,0,0.15);
                   border-radius: 3px;
                   margin-bottom: 10px;
                 `}
@@ -71,7 +70,6 @@ export default function AiSearchWindow() {
                 <div css={css`
                   height: 16px;
                   border-top: 1px solid rgba(0,0,0,0.05);
-                  background: #fff;
                 `}/>
               </div>
             ))

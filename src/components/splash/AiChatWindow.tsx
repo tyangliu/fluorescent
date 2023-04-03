@@ -103,7 +103,7 @@ export default function AiChatWindow() {
             background: rgba(242,246,249,1);
             padding: 6px 10px;
             border-radius: 9999px;
-            margin: 6px;
+            margin: 8px 6px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -125,7 +125,7 @@ export default function AiChatWindow() {
       <div css={css`
         position: absolute;
         width: 100%;
-        height: 30%;
+        height: 20%;
         top: 0;
         left: 0;
         right: 0;
